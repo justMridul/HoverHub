@@ -66,7 +66,7 @@ import Openai from "../components/ui/icons/system/Openai";
 import Telegram from "../components/ui/icons/system/Telegram";
 import Twitch from "../components/ui/icons/system/Twitch";
 import Anthropic from "../components/ui/icons/system/Anthropic";
-import GitHub from "../components/ui/icons/system/GitHub";
+import GitHub from "../components/ui/icons/system/GitHub.jsx";
 import Aws from "../components/ui/icons/system/Aws";
 import ReactIcon from "../components/ui/icons/system/ReactIcon";
 import Discord from "../components/ui/icons/system/Discord";
