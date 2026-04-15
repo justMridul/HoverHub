@@ -66,7 +66,7 @@ import Openai from "../components/ui/icons/system/Openai";
 import Telegram from "../components/ui/icons/system/Telegram";
 import Twitch from "../components/ui/icons/system/Twitch";
 import Anthropic from "../components/ui/icons/system/Anthropic";
-import Github from "../components/ui/icons/system/Github";
+import GitHub from "../components/ui/icons/system/GitHub";
 import Aws from "../components/ui/icons/system/Aws";
 import ReactIcon from "../components/ui/icons/system/ReactIcon";
 import Discord from "../components/ui/icons/system/Discord";
@@ -269,10 +269,6 @@ export const componentsData = [
   component: TiltCard,
   code: tiltCardCode,
 },
-
-/* ===========================
-      BUTTONS
-=========================== */
 
 /* ===========================
       BUTTONS
@@ -502,8 +498,8 @@ export const componentsData = [
 },
 {
   category: "icons",
-  title: "Github",
-  component: Github,
+  title: "GitHub",
+  component: GitHub,
   code: githubCode,
 },
 {

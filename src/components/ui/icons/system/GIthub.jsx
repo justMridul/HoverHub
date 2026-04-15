@@ -1,6 +1,6 @@
 import { motion, useAnimate } from "framer-motion";
 
-export default function Github({
+export default function GitHub({
   size = 24,
   color = "currentColor",
   strokeWidth = 2,
