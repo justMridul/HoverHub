@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 
-export default function IconCard({ title, component: IconComponent, code }) {
+export default function IconCard({ title, component: IconComponent, code, onClick }) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
+  const handleCopy = async (e) => {
+    e.stopPropagation(); // ✅ prevent modal opening
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
@@ -17,19 +18,21 @@ export default function IconCard({ title, component: IconComponent, code }) {
 
   return (
     <motion.div
+      onClick={onClick} // ✅ opens modal
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 260, damping: 18 }}
       className="
-      group
-      relative
-      w-32 h-32 sm:w-36 sm:h-36   /* slightly bigger card */
-      bg-[#0f0f14]
-      border border-zinc-800
-      rounded-xl
-      p-4
-      flex flex-col items-center justify-center gap-3
-      transition-all duration-300
-      hover:border-zinc-600
+        group
+        relative
+        w-32 h-32 sm:w-36 sm:h-36
+        bg-[#0f0f14]
+        border border-zinc-800
+        rounded-xl
+        p-4
+        flex flex-col items-center justify-center gap-3
+        transition-all duration-300
+        hover:border-zinc-600
+        cursor-pointer
       "
     >
       {/* Icon */}
@@ -38,7 +41,7 @@ export default function IconCard({ title, component: IconComponent, code }) {
         transition={{ type: "spring", stiffness: 300 }}
         className="text-zinc-400 group-hover:text-white transition-colors"
       >
-        <IconComponent size={42} />   {/* 🔥 increased from 30 → 42 */}
+        <IconComponent size={42} />
       </motion.div>
 
       {/* Name */}
@@ -50,13 +53,13 @@ export default function IconCard({ title, component: IconComponent, code }) {
       <button
         onClick={handleCopy}
         className="
-        absolute bottom-2 right-2
-        p-1.5
-        rounded-md
-        bg-zinc-800
-        hover:bg-zinc-700
-        transition
-        opacity-0 group-hover:opacity-100
+          absolute bottom-2 right-2
+          p-1.5
+          rounded-md
+          bg-zinc-800
+          hover:bg-zinc-700
+          transition
+          opacity-0 group-hover:opacity-100
         "
       >
         {copied ? <Check size={14} /> : <Copy size={14} />}

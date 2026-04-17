@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
+import Logo from "../ui/Logo";
 
 export default function Navbar() {
   return (
     <nav className="w-full px-10 py-6 flex items-center justify-between border-b border-zinc-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
 
       {/* Logo */}
-      <Link
-        to="/"
-        className="text-xl font-bold text-white hover:text-orange-400 transition-colors"
-      >
-        HoverHub
+      <Link to="/" className="flex items-center">
+        <Logo />
       </Link>
 
       {/* Navigation */}

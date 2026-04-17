@@ -6,14 +6,14 @@ import ComponentsSection from "../components/layout/ComponentsSection";
 
 import ComponentCard from "../components/ui/library/ComponentCard";
 import IconCard from "../components/ui/library/IconCard";
+import PreviewModal from "../components/PreviewModal";
 
 import { componentsData } from "../data/componentsData";
 
 export default function Components() {
-
   const [category, setCategory] = useState("icons");
   const [search, setSearch] = useState("");
-  const [sortOption, setSortOption] = useState("az");
+  const [selectedComponent, setSelectedComponent] = useState(null);
 
   // Tabs
   const renderTabs = useMemo(() => {
@@ -43,14 +43,13 @@ export default function Components() {
     />
   );
 
-  // ✅ UPDATED PREFIX SEARCH LOGIC
+  // Filter logic
   const filteredComponents = useMemo(() => {
     const query = search.toLowerCase();
 
     return componentsData.filter((item) => {
       const matchesCategory = category === item.category;
 
-      // If search is empty → show all
       if (!query) return matchesCategory;
 
       const matchesSearch =
@@ -64,7 +63,6 @@ export default function Components() {
 
   return (
     <div className="relative min-h-screen bg-[#0e0e11] text-zinc-100">
-
       <Navbar />
 
       {/* Hero */}
@@ -76,32 +74,49 @@ export default function Components() {
         currentCategory={category}
       >
         {filteredComponents.map((item) => {
-          const Component = item.component;
-
+          // ICONS
           if (item.category === "icons") {
             return (
               <IconCard
                 key={item.title}
                 title={item.title}
-                component={Component}
+                component={item.component}
                 code={item.code}
+                onClick={() => setSelectedComponent(item)}
               />
             );
           }
 
+          // BUTTONS / CARDS
           return (
             <ComponentCard
               key={item.title}
-              title={item.title}
-              description={item.description}
-              code={item.code}
-            >
-              <Component />
-            </ComponentCard>
+              component={{
+                name: item.title,
+                description: item.description,
+                code: item.code,
+                component: item.component,
+                category: item.category, // ✅ IMPORTANT
+              }}
+              onClick={() => setSelectedComponent(item)}
+            />
           );
         })}
       </ComponentsSection>
 
+      {/* GLOBAL MODAL */}
+      <PreviewModal
+        component={
+          selectedComponent && {
+            name: selectedComponent.title,
+            description: selectedComponent.description,
+            code: selectedComponent.code,
+            component: selectedComponent.component,
+            category: selectedComponent.category, // ✅ IMPORTANT
+          }
+        }
+        onClose={() => setSelectedComponent(null)}
+      />
     </div>
   );
 }
