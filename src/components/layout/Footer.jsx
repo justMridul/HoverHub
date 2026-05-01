@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // ICONS (adjusted to your folder structure)
-import Github from "../ui/icons/system/Github";
+import GitHub from "../ui/icons/system/GitHub";
 import HeartBeat from "../ui/icons/system/HeartBeat";
 import Javascript from "../ui/icons/system/Javascript";
 import Python from "../ui/icons/system/Python";
@@ -16,7 +16,7 @@ import Telegram from "../ui/icons/system/Telegram";
 
 export default function Footer() {
   const featuredIcons = [
-    Github,
+    GitHub,
     HeartBeat,
     Javascript,
     Python,
