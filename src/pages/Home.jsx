@@ -1,7 +1,10 @@
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/layout/Hero";
 import Features from "../components/layout/Features";
+import BackedBy from "../components/layout/BackedBy";
 import Preview from "../components/layout/Preview";
+import Footer from "../components/layout/Footer";
+
 
 export default function Home() {
   return (
@@ -13,10 +16,10 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-
-      {/* 🔥 ADD THIS */}
       <Features />
+      <BackedBy />
       <Preview />
+      <Footer />
 
     </div>
   );

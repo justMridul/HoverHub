@@ -10,9 +10,9 @@ export default function Logo() {
       {/* ICON */}
       <div className="relative w-6 h-6 flex items-center justify-center">
 
-        {/* BACK LAYER */}
+        {/* TOP LAYER (WHITE) */}
         <motion.div
-          className="absolute w-4 h-4 rounded-md bg-orange-500"
+          className="absolute w-4 h-4 rounded-md bg-white"
           variants={{
             initial: { x: -2, y: -2 },
             hover: { x: -6, y: -6 },
@@ -20,9 +20,9 @@ export default function Logo() {
           transition={{ type: "spring", stiffness: 300 }}
         />
 
-        {/* FRONT LAYER */}
+        {/* BOTTOM LAYER (ORANGE) */}
         <motion.div
-          className="absolute w-4 h-4 rounded-md bg-orange-400"
+          className="absolute w-4 h-4 rounded-md bg-orange-500 shadow-md shadow-orange-500/30"
           variants={{
             initial: { x: 2, y: 2 },
             hover: { x: 6, y: 6 },

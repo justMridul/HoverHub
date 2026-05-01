@@ -11,32 +11,26 @@ export default function Navbar() {
       </Link>
 
       {/* Navigation */}
-      <div className="flex gap-8 text-zinc-400 text-sm">
+     <div className="flex gap-8 text-zinc-400 text-sm">
 
-        <Link
-          to="/components"
-          className="hover:text-white transition-colors"
-        >
-          Components
-        </Link>
+  <Link to="/components" className="hover:text-white transition-colors">
+    Components
+  </Link>
 
-        <a
-          href="#"
-          className="hover:text-white transition-colors"
-        >
-          Docs
-        </a>
+  <Link to="/docs" className="hover:text-white transition-colors">
+    Docs
+  </Link>
 
-        <a
-          href="https://github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
-        >
-          GitHub
-        </a>
+  <a
+    href="https://github.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition-colors"
+  >
+    GitHub
+  </a>
 
-      </div>
+</div>
     </nav>
   );
 }

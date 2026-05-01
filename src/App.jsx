@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Components from "./pages/Components";
+import Docs from "./pages/Docs"; 
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/components" element={<Components />} />
+        <Route path="/docs" element={<Docs />} /> {/* ✅ ADD THIS */}
       </Routes>
     </div>
   );
