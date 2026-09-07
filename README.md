@@ -1,16 +1,94 @@
-# React + Vite
+# HoverHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern React-based UI component library featuring interactive, animated, and reusable components.
 
-Currently, two official plugins are available:
+HoverHub is a frontend component showcase and library designed to help developers discover, preview, understand, and reuse interactive UI components in their React applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project focuses heavily on reusable components, animations, clean architecture, and developer experience.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+**Live Website:**  
+https://hover-hub-nine.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**GitHub Repository:**  
+https://github.com/justMridul/HoverHub
+
+---
+
+## 📌 Overview
+
+HoverHub provides a collection of reusable UI components such as:
+
+- Animated Buttons
+- Interactive Cards
+- Animated Icons
+- Hover Effects
+- Micro-interactions
+- Other reusable UI elements
+
+The main goal is to make it easier for developers to find interesting UI components without having to implement every animation or interaction from scratch.
+
+A developer can:
+
+1. Browse the available components
+2. Search for a specific component
+3. Preview the component
+4. View its source code
+5. Copy the source code
+6. Download the component as a `.jsx` file
+7. Integrate it into their own React project
+
+---
+
+## ✨ Features
+
+### 1. Reusable UI Components
+
+HoverHub contains 50+ reusable UI components organized into different categories.
+
+Examples include:
+- Buttons
+- Cards
+- Icons
+- Interactive elements
+
+Each component is designed independently so that it can be reused across different parts of the application.
+
+---
+
+### 2. Component Search
+
+Users can search through the component library using the search bar. The search functionality dynamically filters the available components based on the user's input.
+
+---
+
+### 3. Live Component Preview
+
+Users can select a component and open a Preview Modal. The modal allows users to see the component in action before using it, while also providing access to its source code.
+
+---
+
+### 4. Copy to Clipboard & File Download
+
+- **Copy:** Users can instantly copy component source code using the native browser Clipboard API (`navigator.clipboard.writeText`).
+- **Download:** Users can download standalone `.jsx` component files directly on the client side using the Blob API without requiring backend processing.
+
+- ## 🛠️ Tech Stack
+
+* **Frontend:** React.js, Vite, React Router DOM, Framer Motion, CSS / Tailwind CSS, Lucide React
+* **Deployment & Tooling:** Git, GitHub, Vercel
+
+---
+
+## 🏗️ Architecture & Data Flow
+
+HoverHub utilizes a centralized data layer (`componentsData.js`) to decouple UI presentation from layout logic.
+
+## 🚀 Local Development Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/justMridul/HoverHub.git](https://github.com/justMridul/HoverHub.git)
