@@ -106,3 +106,10 @@ Ensure you have the following installed on your system:
    ```bash
    git clone [https://github.com/justMridul/HoverHub.git](https://github.com/justMridul/HoverHub.git)
    cd HoverHub
+2. **Install Project Dependencies**
+
+   npm install
+   
+4. **Launch the Development Server**
+
+   npm run dev
