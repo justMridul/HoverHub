@@ -89,6 +89,20 @@ HoverHub utilizes a centralized data layer (`componentsData.js`) to decouple UI 
 
 ## 🚀 Local Development Setup
 
-1. **Clone the repository:**
+Follow these steps to set up and run HoverHub locally on your machine.
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+* [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
+* [npm](https://www.npmjs.com/) (comes bundled with Node.js) or [yarn](https://yarnpkg.com/)
+* [Git](https://git-scm.com/)
+
+---
+
+### Step-by-Step Installation
+
+1. **Clone the Repository**
    ```bash
    git clone [https://github.com/justMridul/HoverHub.git](https://github.com/justMridul/HoverHub.git)
+   cd HoverHub
